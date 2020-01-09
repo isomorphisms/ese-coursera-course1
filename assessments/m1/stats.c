@@ -86,14 +86,14 @@ void sort(unsigned int how_many, unsigned int *list_of_nums) {
 	volatile int fifth = * list_of_nums[4]
 
 
-	volatile int bigger, smaller;
-	if (first > second) { bigger = first; smaller = second; }
-	if (first < second) { smaller = first; bigger = second; }
+	volatile int big, small;
+	if (first > second) { big = first; small = second; }
+	if (first < second) { small = first; bigg = second; }
 	
 
 	volatile int middle;
-	if (third > bigger) { middle = bigger; bigger = third; }
-	else if (third < smaller) { middle = smaller; smaller = third; }
+	if (third > bigger) { middle = big; big = third; }
+	else if (third < small) { middle = small; small = third; }
 	else { middle = third; }
 
 
@@ -108,6 +108,49 @@ void sort(unsigned int how_many, unsigned int *list_of_nums) {
 	// unified naming for the five layers
 
 
+
+	if (fourth > big) { maximum = fourth; }
+	if (fourth < small) { minimum = fourth; }
+	//need some kind of double-else??  or switch to switches...
+
+
+	//malcolm in the middle...
+	if (fourth < big && fourth > small) {
+		if (fourth > middle) { i = fourth; }
+		if (fourth < middle) { a = foruth; }
+		// hmm, edge case....don’t feel like dealing with == today, so screw you. (which, I guess, screws myself...
+		} // end fourth in the middle
+
+
+	// how to check for exhaustion in general? this seems so bug prone.... if I’m just the least bit tired, interrupted, forgetful………
+
+
+
+	if (fifth > big) { i = big; p = fifth; }
+	if (fifth < small) { q = fifth; a = small; }
+
+	//double else
+	if (fifth < big && fifth > small) {
+		
+		 }	//end dealing with "the fifth element"
+
+
+
+
+
+	//now, use these 5 points to define the 3 layer cakes and cutpoints to be used later
+
+
+
+	//now, in a loop, push and pop things down-onto and up-under the layers of the cake
+	// see previous comments, there may be a smarter way to write this, either space-wise or code-wise
+
+	
+
+
+
+// is there a way to _generate code_ that automates writing this kind of thing by hand? rather than always sending to the 
+// need to check again about speed of comparison operators --- I'm assuming they're wicked fast in assembly
 
 
 
