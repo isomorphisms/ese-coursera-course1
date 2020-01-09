@@ -116,13 +116,20 @@ void sort(unsigned int how_many, unsigned int *list_of_nums) {
 
 	//malcolm in the middle...
 	if (fourth < big && fourth > small) {
-		if (fourth > middle) { i = fourth; }
-		if (fourth < middle) { a = foruth; }
+		if (fourth > middle) { i = fourth; m = middle; }
+		//stuff m = middle so I have something to index the fifth against (count 4 fingers on hand)
+		if (fourth < middle) { a = foruth; m = middle; }
 		// hmm, edge case....don’t feel like dealing with == today, so screw you. (which, I guess, screws myself...
 		} // end fourth in the middle
 
 
+
+
+
 	// how to check for exhaustion in general? this seems so bug prone.... if I’m just the least bit tired, interrupted, forgetful………
+
+
+
 
 
 
@@ -131,7 +138,9 @@ void sort(unsigned int how_many, unsigned int *list_of_nums) {
 
 	//double else
 	if (fifth < big && fifth > small) {
-		
+		//so fifth will be one of i,m,a
+		//but only one of a or i will exist, depending where the fourth fell
+		if (fifth < middle) { 	}
 		 }	//end dealing with "the fifth element"
 
 
