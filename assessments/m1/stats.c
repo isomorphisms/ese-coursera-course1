@@ -109,6 +109,10 @@ void sort(unsigned int how_many, unsigned int *list_of_nums) {
 
 
 
+	//hmm, should I really have been using maximum and minimum?
+	//I didn't want to collide with p and q yet....
+	//and BUFFER-wise/PAGE-wise this space constraint should not be binding...
+	//it's just about writing clear code with a shit ton of comparison operators and names for the spaces between my fingers...
 	if (fourth > big) { maximum = fourth; }
 	if (fourth < small) { minimum = fourth; }
 	//need some kind of double-else??  or switch to switches...
@@ -147,7 +151,7 @@ void sort(unsigned int how_many, unsigned int *list_of_nums) {
 		//existence of i is therefore a FLAG for fourth > middle before
 		//existence of a is therefore a FLAG for fourth < middle before
 		
-		 }	//end dealing with "the fifth element"
+		 }	//end dealing with "the fifth element", starring Bruce Willis and Milla Jovovich
 
 
 
@@ -168,6 +172,35 @@ void sort(unsigned int how_many, unsigned int *list_of_nums) {
 // need to check again about speed of comparison operators --- I'm assuming they're wicked fast in assembly
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+	// if newbie > p
+		//pop newbie onto top layer cake
+
+	// if p > newbie > i
+		//push newbie up under top layer cake
+
+	// if i > newbie > m
+		//pop newbie on top of middle layer cake
+
+	// if m > newbie > a
+		//push newbie up under the middle layer cake
+
+	// if a > newbie > q
+		//pop newbie down on top of the bottom layer cake
+
+	// if q > newbie
+		//push newbie up under the bottom layer cake
 
 	} //end sort
 
