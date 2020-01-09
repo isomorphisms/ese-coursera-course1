@@ -116,10 +116,10 @@ void sort(unsigned int how_many, unsigned int *list_of_nums) {
 
 	//malcolm in the middle...
 	if (fourth < big && fourth > small) {
-		if (fourth > middle) { i = fourth; m = middle; }
+		if (fourth > middle) { i = fourth; }
 		//stuff m = middle so I have something to index the fifth against (count 4 fingers on hand)
-		if (fourth < middle) { a = foruth; m = middle; }
-		// hmm, edge case....don’t feel like dealing with == today, so screw you. (which, I guess, screws myself...
+		if (fourth < middle) { a = fourth; }
+		// hmm, edge case....don’t feel like dealing with == today, so screw you. (which, I guess, means screw myself...)
 		} // end fourth in the middle
 
 
@@ -133,6 +133,9 @@ void sort(unsigned int how_many, unsigned int *list_of_nums) {
 
 
 
+	//existence of maximum is a FLAG for maximum>big
+	//existence of minimum is a FLAG for minimum<small
+	//I should maybe unify those under pimaq.....but I made minimum and maximum for I think this reason......
 	if (fifth > big) { i = big; p = fifth; }
 	if (fifth < small) { q = fifth; a = small; }
 
@@ -140,7 +143,10 @@ void sort(unsigned int how_many, unsigned int *list_of_nums) {
 	if (fifth < big && fifth > small) {
 		//so fifth will be one of i,m,a
 		//but only one of a or i will exist, depending where the fourth fell
-		if (fifth < middle) { 	}
+
+		//existence of i is therefore a FLAG for fourth > middle before
+		//existence of a is therefore a FLAG for fourth < middle before
+		
 		 }	//end dealing with "the fifth element"
 
 
